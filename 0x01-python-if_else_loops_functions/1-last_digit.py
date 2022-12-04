@@ -8,5 +8,5 @@ elif ((number % 10) == 0):
 elif number < 0:
     number = -number
     if (-(number % 10) < 6 and -(number % 10) != 0):
-        print(f"Last digit of -{number} is -{number % 10}", end="")
+        print(f"Last digit of -{number} is -{number % 10} ", end="")
         print("and is less than 6 and not 0")
