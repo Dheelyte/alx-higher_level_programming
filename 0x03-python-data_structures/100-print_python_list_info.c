@@ -1,29 +1,15 @@
-#ifndef LISTS_H
-#define LISTS_H
+#include <Python.h>
+#include <object.h>
+#include <listobject.h>
 
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-
-/**
- * struct listint_s - singly linked list
- * @n: integer
- * @next: points to the next node
- *
- * Description: singly linked list node structure
- * for Holberton project
- */
-typedef struct listint_s
+void print_python_list_info(PyObject *p)
 {
-	int n;
-	struct listint_s *next;
-} listint_t;
+	long int size = PyList_Size(p);
+	int i;
+	PyListObject *obj = (PyListObject *)p;
 
-size_t print_listint(const listint_t *h);
-listint_t *add_nodeint_end(listint_t **head, const int n);
-void free_listint(listint_t *head);
-
-void reverse_listint(listint_t **head);
-int is_palindrome(listint_t **head);
-
-#endif /* LISTS_H */
+	printf("[*] Size of the Python List = %li\n", size);
+	printf("[*] Allocated = %li\n", obj->allocated);
+	for (i = 0; i < size; i++)
+		printf("Element %i: %s\n", i, Py_TYPE(obj->ob_item[i])->tp_name);
+}
