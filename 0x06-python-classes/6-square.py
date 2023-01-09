@@ -1,29 +1,27 @@
 #!/usr/bin/python3
 
-"""Write a class Square that defines a square by."""
+"""Define a class Square."""
 
 
-class Square():
-
-    """A class Square that defines a square."""
+class Square:
+    """Represent a square."""
 
     def __init__(self, size=0, position=(0, 0)):
-        """Initialize a square.
-
+        """Initialize a new square.
         Args:
-            size (int): The size of the square.
+            size (int): The size of the new square.
+            position (int, int): The position of the new square.
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
-        """Setter method that returns the size of a square"""
-        return self.__size
+        """Get/set the current size of the square."""
+        return (self.__size)
 
     @size.setter
     def size(self, value):
-        """Setter method that sets the size of a square"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif value < 0:
@@ -31,8 +29,9 @@ class Square():
         self.__size = value
 
     @property
-    def position():
-        return self.__position
+    def position(self):
+        """Get/set the current position of the square."""
+        return (self.__position)
 
     @position.setter
     def position(self, value):
