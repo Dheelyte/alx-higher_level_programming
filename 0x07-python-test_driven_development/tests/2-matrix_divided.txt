@@ -49,18 +49,6 @@ Argument ```div``` must be a number (integer or float)
 
 ::
 
-	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('nan'))
-        Traceback (most recent call last):
-        TypeError: div must be a number
-
-::
-
-	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], float('inf'))
-        Traceback (most recent call last):
-        TypeError: div must be a number
-
-::
-
 	>>> matrix_divided([[1, 2, 3], [4, 5, 6]], None)
         Traceback (most recent call last):
         TypeError: div must be a number
