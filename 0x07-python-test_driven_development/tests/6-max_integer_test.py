@@ -15,4 +15,3 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_empty_list(self):
         self.assertEqual(max_integer([]), None)
-
