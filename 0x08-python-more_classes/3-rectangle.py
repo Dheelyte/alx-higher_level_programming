@@ -22,7 +22,6 @@ class Rectangle():
                 rect.append("\n")
         return "".join(rect)
 
-
     @property
     def width(self):
         """property def width(self): to retrieve it"""
