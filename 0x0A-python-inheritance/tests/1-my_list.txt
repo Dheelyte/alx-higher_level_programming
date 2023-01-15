@@ -8,6 +8,12 @@ This module contains a class called ```MyList```
 
 	>>> MyList = __import__('1-my_list').MyList
 	>>> my_list = MyList()
+	>>> my_list.print_sorted()
+	[]
+
+::
+
+	>>>
 	>>> my_list.append(1)
 	>>> print(my_list)
 	[1]
@@ -46,3 +52,11 @@ This module contains a class called ```MyList```
 	7
 	>>> my_list.print_sorted()
 	[1, 2, 3, 5, 10]
+
+
+::
+
+	>>> my_list.append(-1)
+	>>> my_list.append(-5)
+	>>> my_list.print_sorted()
+	[-5, -1, 1, 2, 3, 5, 10]

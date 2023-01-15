@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """Contains class MyList that inherits from list"""
 
+
 class MyList(list):
     """A subclass of list"""
 
