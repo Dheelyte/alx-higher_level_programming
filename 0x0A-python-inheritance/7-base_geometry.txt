@@ -1,0 +1,54 @@
+=============================
+How to use 7-base_geometry.py
+=============================
+
+
+This module contains a class called ```BaseGeometry```
+
+
+::
+
+
+	>>> BaseGeometry = __import__("7-base_geometry").BaseGeometry
+	>>> bg = BaseGeometry()
+	>>> bg.integer_validator("Geometry", 1)
+
+
+::
+
+
+	>>> bg.integer_validator("Geometry", 0)
+	Traceback (most recent call last):
+	ValueError: Geometry must be greater than 0
+
+
+::
+
+
+	>>> bg.integer_validator("Geometry", -1)
+	Traceback (most recent call last):
+	ValueError: Geometry must be greater than 0
+
+
+::
+
+
+	>>> bg.integer_validator("Geometry", "3")
+	Traceback (most recent call last):
+	TypeError: Geometry must be an integer
+
+
+::
+
+
+	>>> bg.integer_validator("Geo", 2.0)
+	Traceback (most recent call last):
+	TypeError: Geo must be an integer
+
+
+::
+
+
+	>>> bg.integer_validator("Geo", None)
+	Traceback (most recent call last):
+	TypeError: Geo must be an integer
