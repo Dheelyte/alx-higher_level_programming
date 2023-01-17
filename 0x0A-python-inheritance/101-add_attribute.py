@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""""""
+"""Contains add_attribute function"""
 
 
 def add_attribute(obj, attr, value):
