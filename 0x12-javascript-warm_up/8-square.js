@@ -9,12 +9,10 @@ if (isNaN(value)) {
   let i, j;
   for (i = 0; i < value; i++) {
     for (j = 0; j < value; j++) {
-      if (j === value - 1 && i === j) {
-        string += 'X';
-      } else if (j === value - 1 && i !== j) {
+      if (j === value - 1 && i !== j) {
         string += 'X\n';
       } else {
-        string += 'X ';
+        string += 'X';
       }
     }
   }
